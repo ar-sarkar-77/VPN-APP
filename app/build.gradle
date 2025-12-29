@@ -23,9 +23,29 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
+
+    //extra addition
+
+    flavorDimensions "implementation", "ovpnimpl"
+
+    productFlavors {
+        ui {
+            dimension "implementation"
+        }
+        skeleton {
+            dimension "implementation"
+        }
+        ovpn23 {
+            dimension "ovpnimpl"
+        }
+        ovpn2 {
+            dimension "ovpnimpl"
+        }
+    }
+
 }
 
 dependencies {
@@ -38,6 +58,7 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
 
-    implementation 'com.github.schwabe:ics-openvpn:0.7.22'
+    implementation project(':openvpn')
+
 
 }

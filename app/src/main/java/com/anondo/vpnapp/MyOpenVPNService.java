@@ -6,6 +6,8 @@ import android.os.ParcelFileDescriptor;
 
 import java.io.FileInputStream;
 
+import de.blinkt.openvpn.VpnProfile;
+
 
 public class MyOpenVPNService extends VpnService {
 

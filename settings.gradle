@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "VPN APP"
-include ':app'
+//include ':app'
+include ':app', ':openvpn'
+
